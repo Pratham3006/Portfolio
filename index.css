@@ -84,57 +84,65 @@ body{
     background-image: url(./images/smile.png);
     background-size: contain;
 }
-.box{
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    filter: brightness(1);
-    animation: float 0.8s infinite;
-    padding: 10px;
-    border: 0.5px solid black;
-    border-radius: 100%;
-    background-color: rgb(241, 241, 241);
-}
 
-.box img{
-    width: 100%;
-    height: 100%;
-}
 .smile{
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.box {
+    position: absolute;
+    width: 60px; /* Slightly increased size for better visibility */
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: brightness(1);
+    animation: float 5s ease-in-out infinite; /* Smooth float animation */
+    padding: 8px; /* Reduced padding to maintain balance */
+    border: 2px solid rgba(0, 0, 0, 0.2); /* Softer border */
+    border-radius: 50%; /* Maintain circular shape */
+    background-color: #f5f5f5; /* Lighter background for modern look */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    filter: brightness(1.2); /* Slight brightness increase on hover */
+}
+
+.box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the container properly */
+    border-radius: 50%; /* Keep images circular inside the box */
+}
 @keyframes float {
-    0% {
-      transform: translateY(0);
+    0%, 100% {
+        transform: translateY(0);
     }
     50% {
-      transform: translateY(-40px);
+        transform: translateY(-10px); /* Float upward slightly */
     }
-    100% {
-      transform: translateY(0);
-    }
-  }
-  .box:nth-child(1) { top: 77vh; left: 7.5vw; animation-duration: 8s; }
-.box:nth-child(2) { top: 66vh; left: 7.5vw; animation-duration: 8s; }
-.box:nth-child(3) { top: 55vh; left: 8vw; animation-duration: 8s; }
-.box:nth-child(4) { top: 42vh; left: 9vw; animation-duration: 8s; }  
-.box:nth-child(5) { top: 29vh; left: 12vw; animation-duration: 8s; }
-.box:nth-child(6) { top: 15vh; left: 21vw; animation-duration: 8s; }
-.box:nth-child(7) { top: 6vh; left: 34vw; animation-duration: 8s; }
-.box:nth-child(8) { top: 5vh; left: 47vw; animation-duration: 8s; }
-.box:nth-child(9) { top: 6vh; left: 60vw; animation-duration: 8s; }
-.box:nth-child(10) { top: 15vh; left: 73vw; animation-duration: 8s; }
-.box:nth-child(11) { top: 29vh; left: 81vw; animation-duration: 8s; }  
-.box:nth-child(12) { top: 42vh; left: 87vw; animation-duration: 8s; }
-.box:nth-child(13) { top: 55vh; left: 90vw; animation-duration: 8s; }
-.box:nth-child(14) { top: 66vh; left: 90.5vw; animation-duration: 8s; }
-.box:nth-child(15) { top: 77vh; left: 91vw; animation-duration: 8s; }
+}
+.box:nth-child(1) { top: 77%; left: 5%; animation-duration: 8s; }
+.box:nth-child(2) { top: 66%; left: 5.5%; animation-duration: 8s; }
+.box:nth-child(3) { top: 55%; left: 6%; animation-duration: 8s; }
+.box:nth-child(4) { top: 42%; left: 7%; animation-duration: 8s; }  
+.box:nth-child(5) { top: 29%; left: 11%; animation-duration: 8s; }
+.box:nth-child(6) { top: 15%; left: 21%; animation-duration: 8s; }
+.box:nth-child(7) { top: 6%; left: 34%; animation-duration: 8s; }
+.box:nth-child(8) { top: 5%; left: 47%; animation-duration: 8s; }
+.box:nth-child(9) { top: 6%; left: 60%; animation-duration: 8s; }
+.box:nth-child(10) { top: 15%; left: 73%; animation-duration: 8s; }
+.box:nth-child(11) { top: 29%; left: 85%; animation-duration: 8s; }  
+.box:nth-child(12) { top: 42%; left: 88%; animation-duration: 8s; }
+.box:nth-child(13) { top: 55%; left: 90%; animation-duration: 8s; }
+.box:nth-child(14) { top: 66%; left: 90.5%; animation-duration: 8s; }
+.box:nth-child(15) { top: 77%; left: 91%; animation-duration: 8s; }
+
 
 @keyframes blink {
     50% {

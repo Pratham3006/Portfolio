@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    font-family: "Poppins", system-ui;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+body{
+    height: 900vh;
+}
+.navbar{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+.icon-image{
+    width: 80px;
+    height: 80px;
+}
+.icon-image-parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.nav-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.list-items{
+    list-style-type: none;
+    margin: 20px;
+}
+.My-image{
+    width: 50%;
+}
+.skate{
+    width: 700px;
+    height: 700px;
+}
+.hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hero-text {
+    width: 50%;
+    display: flex;
+    justify-content: center;  /* Aligns items to the right */
+    align-items: center;    /* Aligns items to the top */
+    flex-direction: column;     /* Ensures text flows vertically */
+    height: 100vh;
+    white-space: wrap;              /* Set a height to make alignment work */
+}
+.blinking-cursor {
+    width: 100px;
+    height: 2px;
+    background-color: black;
+    animation: blink 0.7s step-start infinite;
+}
+#Name{
+    font-size: 130px;
+    text-align: center;
+}
+.about-me{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#about{
+    margin-top: 100px;
+    font-size: 2em;
+}
+.frontend{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    height: 1000px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-image: url(./smile.png);
+    background-size: contain;
+}
+.box{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    filter: brightness(1);
+    animation: float 0.8s infinite;
+    padding: 10px;
+    border: 0.5px solid black;
+    border-radius: 100%;
+    background-color: rgb(241, 241, 241);
+}
+
+.box img{
+    width: 100%;
+    height: 100%;
+}
+.smile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-40px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  .box:nth-child(1) { top: 77%; left: 7.5%; animation-duration: 8s; }
+  .box:nth-child(2) { top: 66%; left: 7.5%; animation-duration: 8s; }
+  .box:nth-child(3) { top: 55%; left: 8%; animation-duration: 8s; }
+  .box:nth-child(4) { top: 42%; left: 9%; animation-duration: 8s; }  
+  .box:nth-child(5) { top: 29%; left: 12%; animation-duration: 8s; }
+  .box:nth-child(6) { top: 15%; left: 21%; animation-duration: 8s; }
+  .box:nth-child(7) { top: 6%; left: 34%; animation-duration: 8s; }
+  .box:nth-child(8) { top: 5%; left: 47%; animation-duration: 8s; }
+  .box:nth-child(9) { top: 6%; left: 60%; animation-duration: 8s; }
+  .box:nth-child(10) { top: 15%; left: 73%; animation-duration: 8s; }
+  .box:nth-child(11) { top: 29%; left: 81%; animation-duration: 8s; }  
+  .box:nth-child(12) { top: 42%; left: 87%; animation-duration: 8s; }
+  .box:nth-child(13) { top: 55%; left: 90%; animation-duration: 8s; }
+  .box:nth-child(14) { top: 66%; left: 90.5%; animation-duration: 8s; }
+  .box:nth-child(15) { top: 77%; left: 91%; animation-duration: 8s; }
+
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+/* Base styles (already mobile-friendly by default) */
+
+/* For screens larger than 1200px (desktops) */
+@media (min-width: 1200px) {
+    .icon-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    #Name {
+        font-size: 130px;
+    }
+
+    .hero-text {
+        font-size: 2.5em;
+    }
+
+    .box {
+        width: 50px;
+        height: 50px;
+    }
+
+    
+}
+
+/* For screens between 768px and 1199px (tablets) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .navbar {
+        padding: 20px;
+    }
+
+    .icon-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    #Name {
+        font-size: 90px;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero-text {
+        font-size: 2em;
+        width: 100%;
+        text-align: center;
+    }
+
+    .box {
+        width: 40px;
+        height: 40px;
+    }
+
+    
+    .about-me {
+        flex-direction: column;
+    }
+
+    .frontend {
+        height: 900px;
+        background-size: cover;
+    }
+}
+
+/* For screens smaller than 768px (mobile devices) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .icon-image {
+        width: 50px;
+        height: 50px;
+    }
+
+    #Name {
+        font-size: 60px;
+    }
+
+    .hero-text {
+        font-size: 1.8em;
+        text-align: center;
+        height: auto;
+        margin: 20px 0;
+    }
+
+   
+
+    .skate {
+        width: 400px;
+        height: 400px;
+    }
+
+    .box {
+        width: 30px;
+        height: 30px;
+    }
+
+    .about-me {
+        flex-direction: column;
+    }
+
+    #about {
+        margin-top: 30px;
+        font-size: 1.2em;
+    }
+
+    .frontend {
+        height: 700px;
+        background-size: contain;
+    }
+}
+
+/* For screens smaller than 480px (small mobile devices) */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 5px;
+    }
+
+    .icon-image {
+        width: 40px;
+        height: 40px;
+    }
+
+    #Name {
+        font-size: 40px;
+    }
+
+    .hero-text {
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    
+    .skate {
+        width: 200px;
+        height: 200px;
+    }
+
+    .box {
+        width: 20px;
+        height: 20px;
+    }
+
+    #about {
+        margin-top: 20px;
+        font-size: 1em;
+    }
+
+    .frontend {
+        height: 600px;
+        background-size: cover;
+    }
+}

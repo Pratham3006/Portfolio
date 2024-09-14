@@ -81,7 +81,7 @@ body{
     height: 1000px;
     background-repeat: no-repeat;
     background-position: top;
-    background-image: url(./smile.png);
+    background-image: url(./images/smile.png);
     background-size: contain;
 }
 .box{
